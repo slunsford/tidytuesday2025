@@ -1,56 +1,13 @@
 ---
-title: Welcome to Evidence
+title: Welcome to Sean's TidyTuesday
 ---
 
-<Details title='How to edit this page'>
+Here's my foray into [TidyTuesday](https://tidytues.day/). I don't know how frequently I'm going to be able to do this, but as I do, pages will be added to the sidebar on the left.
 
-  This page can be found in your project at `/pages/index.md`. Make a change to the markdown file and save it to see the change take effect in your browser.
+I'm using [Evidence](https://www.evidence.dev/), a static site generator that runs [DuckDB](https://duckdb.org/) under the hood to let you build a site with Markdown and SQL. DuckDB has become one of my favorite things, so I know most participants are using languages like R or Python, but of course I'm going to tackle these with good old SQL and DuckDB.
+
+<Details title='Peeking under the hood'>
+You can show/hide the SQL queries behind this data from the <code>•••</code> menu in the upper right.
 </Details>
 
-```sql categories
-  select
-      category
-  from needful_things.orders
-  group by category
-```
-
-<Dropdown data={categories} name=category value=category>
-    <DropdownOption value="%" valueLabel="All Categories"/>
-</Dropdown>
-
-<Dropdown name=year>
-    <DropdownOption value=% valueLabel="All Years"/>
-    <DropdownOption value=2019/>
-    <DropdownOption value=2020/>
-    <DropdownOption value=2021/>
-</Dropdown>
-
-```sql orders_by_category
-  select 
-      date_trunc('month', order_datetime) as month,
-      sum(sales) as sales_usd,
-      category
-  from needful_things.orders
-  where category like '${inputs.category.value}'
-  and date_part('year', order_datetime) like '${inputs.year.value}'
-  group by all
-  order by sales_usd desc
-```
-
-<BarChart
-    data={orders_by_category}
-    title="Sales by Month, {inputs.category.label}"
-    x=month
-    y=sales_usd
-    series=category
-/>
-
-## What's Next?
-- [Connect your data sources](settings)
-- Edit/add markdown files in the `pages` folder
-- Deploy your project with [Evidence Cloud](https://evidence.dev/cloud)
-
-## Get Support
-- Message us on [Slack](https://slack.evidence.dev/)
-- Read the [Docs](https://docs.evidence.dev/)
-- Open an issue on [Github](https://github.com/evidence-dev/evidence)
+I'd love to actually get into the CSS of this website at some point and make it my own, but in the interest of getting something up, we're just going with off-the-shelf Evidence for now.
