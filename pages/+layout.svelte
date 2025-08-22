@@ -6,7 +6,7 @@
 </script>
 
 <EvidenceDefaultLayout {data}
-  title="Tidy Tuesday"
+  title="TidyTuesday"
   hideBreadcrumbs=false
   builtWithEvidence=true
   githubRepo="https://github.com/slunsford/tidytuesday"
