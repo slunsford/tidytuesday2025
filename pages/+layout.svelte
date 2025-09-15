@@ -10,6 +10,7 @@
   hideBreadcrumbs=false
   builtWithEvidence=true
   githubRepo="https://github.com/slunsford/tidytuesday"
+	fullWidth=true
 >
 	<slot slot="content" />
 </EvidenceDefaultLayout>
