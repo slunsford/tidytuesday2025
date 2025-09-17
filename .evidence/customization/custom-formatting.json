@@ -1,4 +1,20 @@
 {
   "version": "1.0",
-  "customFormats": []
+  "customFormats": [
+    {
+      "formatTag": "iso8601",
+      "formatCode": "yyyy-mm-dd",
+      "valueType": "date"
+    },
+    {
+      "formatTag": "ymd",
+      "formatCode": "yyyy-mm-dd",
+      "valueType": "date"
+    },
+    {
+      "formatTag": "longdmy",
+      "formatCode": "d mmmm yyyy",
+      "valueType": "date"
+    }
+  ]
 }
