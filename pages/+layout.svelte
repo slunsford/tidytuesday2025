@@ -11,7 +11,6 @@
   builtWithEvidence=true
   githubRepo="https://github.com/slunsford/tidytuesday"
 	blueskyProfile="https://bsky.app/profile/seanlunsford.com"
-	fullWidth=true
 >
 	<slot slot="content" />
 </EvidenceDefaultLayout>
