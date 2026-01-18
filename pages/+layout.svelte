@@ -9,7 +9,7 @@
   title="#TidyTuesday"
   hideBreadcrumbs=false
   builtWithEvidence=true
-  githubRepo="https://github.com/slunsford/tidytuesday"
+  githubRepo="https://github.com/slunsford/tidytuesday2025"
 	blueskyProfile="https://bsky.app/profile/seanlunsford.com"
 >
 	<slot slot="content" />
